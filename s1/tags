@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Channel	Channel.cpp	/^Channel::Channel(EventLoop* loop, int fdArg)$/;"	f	class:Channel
+Channel	Channel.h	/^class Channel : boost::noncopyable {$/;"	c
+EventLoop	EventLoop.cpp	/^EventLoop::EventLoop() : looping_(false), threadId_(muduo::CurrentThread::tid())$/;"	f	class:EventLoop
+EventLoop	EventLoop.h	/^class EventLoop : boost::noncopyable {$/;"	c
+Poller	Poller.cpp	/^Poller::Poller(EventLoop* loop) : ownerLoop_(loop) {}$/;"	f	class:Poller
+Poller	Poller.h	/^    class Poller : boost::noncopyable {$/;"	c	namespace:muduo
+__CHANNEL_H__	Channel.h	2;"	d
+__EVENT_LOOP_H__	EventLoop.h	2;"	d
+__POLLER_H__	Poller.h	2;"	d
+abortNotInLoopThread	EventLoop.cpp	/^void EventLoop::abortNotInLoopThread()$/;"	f	class:EventLoop
+activeChannels_	EventLoop.h	/^    ChannelList activeChannels_;$/;"	m	class:EventLoop
+assertInLoopThread	EventLoop.h	/^    void assertInLoopThread()$/;"	f	class:EventLoop
+assertInLoopThread	Poller.h	/^        void assertInLoopThread() { ownerLoop_ -> assertInLoopThread(); }$/;"	f	class:muduo::Poller
+channels_	Poller.h	/^        ChannelMap channels_;$/;"	m	class:muduo::Poller
+enableReading	Channel.h	/^    void enableReading() $/;"	f	class:Channel
+errorCallback_	Channel.h	/^    EventCallback errorCallback_;$/;"	m	class:Channel
+events	Channel.h	/^    int events() const { return events_; }$/;"	f	class:Channel
+events_	Channel.h	/^    int events_;$/;"	m	class:Channel
+fd	Channel.h	/^    int fd() const { return fd_; }$/;"	f	class:Channel
+fd_	Channel.h	/^    const int fd_;$/;"	m	class:Channel
+fillActiveChannels	Poller.cpp	/^void Poller::fillActiveChannels(int numEvents, $/;"	f	class:Poller
+getEventLoopOfCurrentThread	EventLoop.cpp	/^EventLoop* EventLoop::getEventLoopOfCurrentThread()$/;"	f	class:EventLoop
+handleEvent	Channel.cpp	/^void Channel::handleEvent()$/;"	f	class:Channel
+index	Channel.h	/^    int index() { return index_; }$/;"	f	class:Channel
+index_	Channel.h	/^    int index_;$/;"	m	class:Channel
+isInLoopThread	EventLoop.h	/^    bool isInLoopThread() const$/;"	f	class:EventLoop
+isNoneEvent	Channel.h	/^    void isNoneEvent() const { return events_ == kNoneEvent; }$/;"	f	class:Channel
+kNoneEvent	Channel.cpp	/^const int Channel::kNoneEvent = 0;$/;"	m	class:Channel	file:
+kNoneEvent	Channel.h	/^    static const int kNoneEvent;$/;"	m	class:Channel
+kReadEvent	Channel.cpp	/^const int Channel::kReadEvent = POLLIN | POLLPRI; \/\/ 有数据可读 | 有紧迫数据可读$/;"	m	class:Channel	file:
+kReadEvent	Channel.h	/^    static const int kReadEvent;$/;"	m	class:Channel
+kWriteEvent	Channel.cpp	/^const int Channel::kWriteEvent = POLLOUT; \/\/ 写数据不会导致阻塞$/;"	m	class:Channel	file:
+kWriteEvent	Channel.h	/^    static const int kWriteEvent;$/;"	m	class:Channel
+loop	EventLoop.cpp	/^void EventLoop::loop()$/;"	f	class:EventLoop
+loop_	Channel.h	/^    EventLoop* loop_;$/;"	m	class:Channel
+muduo	Poller.h	/^namespace muduo {$/;"	n
+ownerLoop	Channel.h	/^    EventLoop* ownerLoop() { return loop_; }$/;"	f	class:Channel
+poll	Poller.cpp	/^Timestamp Poller::poll(int timeoutMs, ChannelList* activeChannels)$/;"	f	class:Poller
+poller_	EventLoop.h	/^    boost::scoped_ptr<Poller> poller_;$/;"	m	class:EventLoop
+pollfds_	Poller.h	/^        PollFdList pollfds_;$/;"	m	class:muduo::Poller
+quit	EventLoop.cpp	/^void EventLoop::quit()$/;"	f	class:EventLoop
+quit_	EventLoop.h	/^    bool quit_; \/\/ atomic$/;"	m	class:EventLoop
+readCallback_	Channel.h	/^    EventCallback readCallback_;$/;"	m	class:Channel
+revents_	Channel.h	/^    int revents_;$/;"	m	class:Channel
+setErrorCallback	Channel.h	/^    void setErrorCallback(const EventCallback& cb) { errorCallback_ = cb; }$/;"	f	class:Channel
+setReadCallback	Channel.h	/^    void setReadCallback(const EventCallback& cb) { readCallback_ = cb; }$/;"	f	class:Channel
+setWriteCallback	Channel.h	/^    void setWriteCallback(const EventCallback& cb) { writeCallback_ = cb; }$/;"	f	class:Channel
+set_index	Channel.h	/^    void set_index(int idx) { index_ = idx; }$/;"	f	class:Channel
+set_revents	Channel.h	/^    void set_revents(int revt) { revents_ = revt; }$/;"	f	class:Channel
+t_loopInThisThread	EventLoop.cpp	/^__thread EventLoop* t_loopInThisThread = 0;$/;"	v
+threadId_	EventLoop.h	/^    const pid_t threadId_;$/;"	m	class:EventLoop
+update	Channel.cpp	/^void Channel::update()$/;"	f	class:Channel
+updateChannel	EventLoop.cpp	/^void EventLoop::updateChannel(Channel* channel)$/;"	f	class:EventLoop
+updateChannel	Poller.cpp	/^void Poller::updateChannel(Channel* channel)$/;"	f	class:Poller
+writeCallback_	Channel.h	/^    EventCallback writeCallback_;$/;"	m	class:Channel
+~EventLoop	EventLoop.cpp	/^EventLoop::~EventLoop()$/;"	f	class:EventLoop
+~Poller	Poller.cpp	/^Poller::~Poller() {}$/;"	f	class:Poller
